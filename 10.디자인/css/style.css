@@ -1,0 +1,132 @@
+/* 인덱스 화면 */
+/* 케러셀 좌우측 버튼 */
+.carousel-control.left {background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);}
+.carousel-control.right {background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);}
+/* 메인베너1 */
+.main-banner1 {
+    background: linear-gradient(90deg,#0c151c 1.3125rem,transparent 1%) 50%,linear-gradient(#0c151c 1.3125rem,transparent 1%) 50%,#263747;
+    background-size: 1.5rem 1.5rem;
+    padding: 6rem 0;
+    color: #fff;
+}
+.banner-cap {text-align: center;}
+
+/* 메인상품화면 */
+/* a태그가 inline요소여서 이미지를 감싸지 못함, 블럭으로 변경 */
+.prod-list {overflow: hidden;} /* col속성이 float을 가지고 있기 때문에 부모요소 overflow:hidden */
+.prod-list, .prod-link {border:1px solid #333; display: block; text-align: center;}
+.prod-list, .prod-list > li[class*="col-"] {padding: 5px;}
+
+.prod-link .arrow {
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 50px;
+    line-height: 50px;
+    height: 50px;
+    background-color: #d6d6d6;
+    color: whitesmoke;
+}
+/* 호버시 기능 */
+    .prod-link:hover{border-color: #4285F4;}
+    .prod-link > .hover {opacity: 0; width: 100px; background-color: #4285F4;}
+    .prod-link:hover > .arrow {opacity: 0;}
+    .prod-link:hover > .hover {opacity: 1;} /* link호버시, .hover클래스 투명도 1 */
+
+
+/* 나이키 상품 리스트 */
+        .prod-nike-inner img {width: 100%; margin-bottom: 10px;}
+        .prod-content .info span {display: block;}
+        .prod-content {overflow: hidden;}
+        .prod-content .info {float: left;}
+        .prod-content .price {float: right;}
+
+        .prod-nike-inner .prod-color {opacity: 0; transition: all 0.5s ease-in-out; margin-top: -20px;}/* 숨겨놓은 이미지 영역 */
+        .prod-nike-inner:hover .prod-color {opacity: 1;}
+        .prod-nike-inner .prod-color > ul {overflow: hidden;}
+        .prod-nike-inner .prod-color > ul > li {float: left; width: 50px;}
+
+
+        /* ========== 상품상세 ==========*/
+
+        .del {
+            color: #888;
+        }
+
+        .price {
+            font-size: 30px;
+        }
+
+        .title {
+            font-size: 24px;
+        }
+
+        .row .info{
+            margin-bottom: 120px;
+        }
+
+        .control {
+            overflow: hidden;
+        }
+
+        .left {
+            float: left;
+            font-size: 24px;
+            line-height: 45px;
+        }
+        .info .price {border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 10px 0px;}
+
+        .control>.right {
+            float: right;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .order{
+            overflow: hidden;
+        }
+        .but1 {
+            height: 60px;
+            font-size: 18px;
+            float: left;
+            width: 50% ;
+            box-sizing: border-box;
+        }
+
+        /* 댓글영역 */
+        /* 부모영역 릴레이티브  */
+        .reply-wrap {background-color: #f5f5f5; border: 1px solid #ddd; position: relative; padding: 15px;}
+        .reply-wrap .reply-image {position :absolute; top: 15px; left: 15px;}
+        .reply-wrap .reply-content {padding-left: 55px;}
+        .reply-wrap .reply-content .form-control {resize: vertical; margin-bottom: 5px;}
+        .reply-group .reply-input .form-control {width: 160px; margin-bottom: 5px; }
+        .reply-group {overflow: hidden;}/* 부모영역 */
+        .reply-group .reply-input {float: left;}
+        .reply-group button {float: right;}
+
+        /* trinsition */
+        .reply-content textarea {height: 50px;transition: height 0.5s ease-in-out    ;}
+        .reply-content textarea:focus {height: 150px; }
+
+        .reply-wrap .rel-name {overflow: hidden; padding-left: 55px;}
+        .rel-name .rel-strong {float: left;}
+        .rel-name .rel-small {float: left;}
+        .rel-name .right {float: right;}
+
+        /* 댓글 반복 영역 */
+        .reply-group strong, .reply-group small {float: left; margin-right: 10px;}
+        .reply-group a {float: right; text-decoration: none; color:  #777;}
+
+        /* 회원가입 폼 */
+        .join-form {margin: 0 auto; float: none;}  /* 가운데 정렬 */
+        .titlebox {margin: 70px auto; width: 250px; text-align: center; height: 40px; line-height: 40px; font-size: 25px; border-top: 1px solid #E1E1E1; border-bottom: 1px solid #e1e1e1;}
+        /* 박스쉐도우 : 그림자가 가로로떨어진 간격, 세로로 떨어진 간격, 흐릿함 정도, 그림자 색상 */
+        .join-form form {box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); padding: 50px;}
+        @media (max-width: 767px){
+            .join-form form {padding:50px 0px}
+        }
+        .form-control {border-radius: 0px;}/* 윤곽 */
+        .form-control:focus {border-color:#555;}
+
+
+
