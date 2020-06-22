@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <!-- 부트스트랩 디자인 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+
+    <!-- 제이쿼리 추가 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- 가장아래쪽에 개인 디자인을 추가 -->
+    <link rel="stylesheet" href="css/header.css">
+  
+
+    <style>
+        *{padding: 0px; margin: 0px;}
+        a {color: #fff;}
+ 
+        header {position: fixed; top: 0px; left: 0px; background-color: #fff;}
+        header h1 {font-size: 100px; text-align: center;font-weight: 900; margin: 0 ; }
+        header .banner {position: absolute; top: 10px; right: 10px; overflow: hidden; width: 215px; height: 40px;}
+        header .banner li {float: left; margin: 10px 20px;}
+        header .banner li a {color: #555; text-decoration: none; font-size: 16px;}
+
+        
+        header nav {background-color: #444; height: 45px; overflow: hidden; }
+        header nav ul {text-align: center;}
+        header nav ul li {display: inline-block; }
+        header nav ul li a {text-decoration: none; float: left; display: block; padding :0 20px; margin: 0 10px; transition: border 0.5s  ; height : auto;line-height: 40px;  color: #fff; }
+        header nav ul li a:hover {border-bottom: 5px solid #fff;}
+
+        .sidebar {position: fixed; top: 500px; right: 0px; width: 100px; z-index: 100;}
+        .sidebar ul {background-color: #444; text-align: center;}
+        .sidebar ul h3 {padding: 0; margin: 0; font-size: 12px; font-weight: 600;}
+        .sidebar ul li a {display: block; padding: 15px 0; border-top: 1px solid #4d4d4d; color: #fff; font-size: 12px; line-height: 2; letter-spacing: -1px; padding-bottom: 10px; font-family: 'Nanum Myeongjo',serif; text-decoration: none;}
+   
+        .main {text-align: center; margin: 155px auto 0 auto; width: 1200px; height: 750px; position: relative;}
+        .main img {width: 100%;}
+        .main div.main_text {position: absolute; top: 20px; right: 50px; }
+        .main p { font-size: 18px; background: rgba(0,0,0,0.3); padding: 10px; color: #fff; margin-bottom: 5px;}
+        .main h2 { font-size: 36px; background: rgba(71, 46, 46, 0.3); padding: 10px; color: #fff; margin-bottom: 5px; font-weight: 900;}
+
+         a:hover, a:focus { color: #fff;text-decoration: none;}   
+
+        .row-is {text-align: center; overflow: hidden;}
+        .content ul {float: left; width: 100%;}      
+        .content ul li { padding: 10px;  position: relative;}
+        .content ul li img {width: 220px; }
+        .content ul li h2 {font-size: 14px; color: #555; margin-top: 10px;}
+        .content ul li h3 {font-size: 12px; color: #555; margin-top: 10px;}
+        .content ul li .hover-content {position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); opacity: 0;}
+        .content ul li .hover-content a { display: block; width: 100%; height: 100%; color: #fff; font-size: 15px; line-height: 20px; font-weight: bold; text-decoration: none;}
+        .content ul li:hover .hover-content {opacity: 1;}
+
+        @media(max-width: 767px){
+            .sidebar {display: none;}
+            .main > .main_text {display: none;}
+        }
+        
+    </style>    
+
+
+</head>
+<body>
+
+    <header>
+        <div class="container-fluid">
+            <div class = "row">
+                <div class="col-xs-12 col-sm-12">
+                    <div >
+                        <div>
+                            <h1>Z A R A</h1>
+                            <ul class = "banner">
+                                <li><a href="#">LOGIN</a></li>
+                                <li><a href="#">REGISTER</a></li>
+                            </ul>
+                            <nav class="">
+                                <ul>
+                                    <li><a href="#">WOMAN</a></li>
+                                    <li><a href="#">TRF</a></li>
+                                    <li><a href="#">MAN</a></li>
+                                    <li><a href="#">KIDS</a></li>
+                                    <li><a href="#">EDITORIALS</a></li>
+                                </ul>
+
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </header>
+    
+    <aside class="sidebar">
+        <ul class="sidebar-inner">
+            <li>
+                <a href="#">
+                    <h3>전화문의</h3>
+                    <p>010-1234-5678</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>카카오톡</h3>
+                    <p>1:1 상담</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>오시는길</h3>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+
+    <section class="main">
+        <div class="container">
+            <div class = "row"></div>
+                 <div class="col-xs-12"></div>
+                    <img src="img/main.jpg">
+                    <div class="main_text">
+                        <h2>Category Bannner</h2>
+                        <p>Upload image and description</p>
+                        <p>Upload image and description</p>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <section >
+        <div class="container">
+            <div class = "row row-is">
+                    <div class="col-xs-6 col-sm-3 content">
+                        <ul>
+                            <li>
+                                <img src="img/img_01.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆
+                                    <span>2REVIEW(S)</span><br>
+                                    $59.00
+                                </h3>
+                                <div class="hover-content">
+                                    <a href="#">Jarket</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 content">
+                        <ul>
+                            <li>
+                                <img src="img/img_02.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆
+                                    <span>2REVIEW(S)</span><br>
+                                    $59.00
+                                </h3>
+                                <div class="hover-content">
+                                    <a href="#">Jarket</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 content">
+                        <ul>
+                            <li>
+                                <img src="img/img_03.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆
+                                    <span>2REVIEW(S)</span><br>
+                                    $59.00
+                                </h3>
+                                <div class="hover-content">
+                                    <a href="#">Jarket</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 content">
+                        <ul>
+                            <li>
+                                <img src="img/img_04.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆
+                                    <span>2REVIEW(S)</span><br>
+                                    $59.00
+                                </h3>
+                                <div class="hover-content">
+                                    <a href="#">Jarket</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 content">
+                        <ul>
+                            <li>
+                                <img src="img/img_05.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆
+                                    <span>2REVIEW(S)</span><br>
+                                    $59.00
+                                </h3>
+                                <div class="hover-content">
+                                    <a href="#">Jarket</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 content">
+                        <ul>
+                            <li>
+                                <img src="img/img_06.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆
+                                    <span>2REVIEW(S)</span><br>
+                                    $59.00
+                                </h3>
+                                <div class="hover-content">
+                                    <a href="#">Jarket</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 content">
+                        <ul>
+                            <li>
+                                <img src="img/img_07.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆
+                                    <span>2REVIEW(S)</span><br>
+                                    $59.00
+                                </h3>
+                                <div class="hover-content">
+                                    <a href="#">Jarket</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 content">
+                        <ul>
+                            <li>
+                                <img src="img/img_08.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆
+                                    <span>2REVIEW(S)</span><br>
+                                    $59.00
+                                </h3>
+                                <div class="hover-content">
+                                    <a href="#">Jarket</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                           
+            </div>
+        </div>
+    </section>
+</body>
+</html>
